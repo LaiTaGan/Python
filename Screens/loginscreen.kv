@@ -1,0 +1,54 @@
+<LoginScreen>:
+	title: "Login Page"
+	size_hint: None,None
+	size: 400,400
+	MDBoxLayout:
+		orientation: 'vertical'
+		spacing: dp(10)
+		padding: 20,20,20,20
+		AnchorLayout:
+			anchor_x: 'center'
+			anchor_y: 'center'
+			Image:
+				padding: 50,0,0,0
+				size: 150,150
+				size_hint: None,None
+				source:'Images/dogmeme.png'
+		MDBoxLayout: 
+			orientation: 'horizontal'
+			size_hint_y:None
+			height: 50
+			MDBoxLayout:
+				padding:50,0,0,0
+				size_hint_y: None
+				height: 50
+				Label:
+					text: 'User Name :'
+			MDBoxLayout:
+				size_hint_y: None
+				height: 50
+				size_hint_x: None
+				width: 180
+				padding: 0,0,80,10
+				TextInput:
+					size_hint: None,None
+					size: 180,25
+		MDBoxLayout: 
+			orientation: 'horizontal'
+			size_hint_y:None
+			height: 50
+			MDBoxLayout:
+				padding:50,0,0,0
+				size_hint_y: None
+				height: 50
+				Label:
+					text: 'Password :'
+			MDBoxLayout:
+				size_hint_y: None
+				height: 50
+				size_hint_x: None
+				width: 180
+				padding: 0,0,80,10
+				TextInput:
+					size_hint: None,None
+					size: 180,25

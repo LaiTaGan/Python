@@ -2,37 +2,19 @@
     MDBottomNavigation:
         #color stuff
         MDBottomNavigationItem:
-            name: 'screen1'
-            text: "Home"
+            name: 'Production Screen'
+            text: "Production"
             icon: 'home'
             Screen:
                 BoxLayout:
                     orientation:'vertical'
-                    # Button:
-                    #     text:"Main"
-                    #     size: 95, 50
-                    #     size_hint: None, None
-                    # Button:
-                    #     text:"Graph"
-                    #     id: 'plotgraph'
-                    #     size: 95, 50
-                    #     size_hint: None, None
-                    #     on_release: root.load.on_load_csv()
-                    # Button:
-                    #     text:"Test Script"
-                    #     size: 95, 50
-                    #     size_hint: None, None
-                    # Button:
-                    #     text:"Recipe"
-                    #     size: 95, 50
-                    #     size_hint: None, None
                 BoxLayout:
                     MDLabel:
                         text: "Home Page"
                         halign: "center"
         MDBottomNavigationItem:
-            name: 'screen2'
-            text: "TTV"
+            name: 'Debugging Screen'
+            text: "Debugging"
             icon: 'wrench'
             Screen:
                 BoxLayout:
@@ -42,13 +24,13 @@
                         text: "2nd Page"
                         halign: "center"
     MDToolbar:
-        title: "Apollo Thermal Control"
+        title: "Robot Arm Simulation"
         font_size: '50dp'
         spacing: "20dp"
         elevation_normal: 12
         pos_hint: {"top": 1}
-        left_action_items:[['images/gitcat.png', lambda x: nav_drawer.set_state("open"),"Drawer"]]
-        right_action_items:[["bell", lambda x: x, "Notification"],["lan-connect", lambda x: x, "Connection Status"],['exit-to-app', lambda x: root.exit(),"Exit Program"]]
+        left_action_items:[['Images/user.png', lambda x: nav_drawer.set_state("open"),"Drawer"]]
+        right_action_items:[["account", lambda x: root.loginscreen.open(), "Account"],["bell", lambda x: x, "Notification"],["lan-connect", lambda x: x, "Connection Status"],['exit-to-app', lambda x: root.exit(),"Exit Program"]]
         icon_color: 0, 1, 0, 1
     
     MDNavigationDrawer:
@@ -56,29 +38,6 @@
         ScrollView:
             id: md_list
             ContentNavigationDrawer:
-                orientation: "vertical"
-                padding: "16dp"
-                spacing: "16dp"
-                AnchorLayout:
-                    anchor_x: "left"
-                    size_hint_y: None
-                    height: avatar.height
-                    Image:
-                        id: avatar
-                        size_hint: None, None
-                        size: "56dp", "56dp"
-                        source: "images/user.png"
-                MDLabel:
-                    text: "User Name"
-                    font_style: "Button"
-                    size_hint_y: None
-                    height: self.texture_size[1]
-                MDLabel:
-                    text: "Userexample@hotmail.com.sg"
-                    font_style: "Caption"
-                    size_hint_y: None
-                    height: self.texture_size[1]
-                
                 MDRoundFlatIconButton:
                     id: Main_btn
                     icon: "folder-information"
@@ -112,14 +71,3 @@
                     text: "Help"
                     width: dp(250)
                     height: dp(350)
-     
-
-
-                
-
-
-
-
-                
-                
-            
