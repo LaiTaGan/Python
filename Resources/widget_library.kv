@@ -1,0 +1,24 @@
+<ContentNavigationDrawer@BoxLayout,MDList>:
+	orientation: "vertical"
+    spacing: "16dp"
+    padding: 30,0,0,200
+    AnchorLayout:
+        anchor_x: "left"
+        size_hint_y: None
+        height: avatar.height
+        Image:
+            id: avatar
+            size_hint: None, None
+            size: "56dp", "56dp"
+            source: "images/user.png"
+    MDLabel:
+        text: "User Name"
+        font_style: "Button"
+        size_hint_y: None
+        height: self.texture_size[1]
+    MDLabel:
+        text: "Userexample@hotmail.com.sg"
+        font_style: "Caption"
+        size_hint_y: None
+        height: self.texture_size[1]
+                

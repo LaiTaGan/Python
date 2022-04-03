@@ -1,21 +1,17 @@
-<ContentNavBtm>:
+<ContentSwitcher>:
     MDBottomNavigation:
         #color stuff
         MDBottomNavigationItem:
             name: 'Production Screen'
             text: "Production"
             icon: 'home'
-            Screen:
-                BoxLayout:
-                    orientation:'vertical'
-                BoxLayout:
-                    MDLabel:
-                        text: "Home Page"
-                        halign: "center"
+            MDBoxLayout:
+                MainContainer:
+                      
         MDBottomNavigationItem:
             name: 'Debugging Screen'
             text: "Debugging"
-            icon: 'wrench'
+            icon: 'set-center'
             Screen:
                 BoxLayout:
                     orientation:'vertical'
@@ -23,51 +19,24 @@
                     MDLabel:
                         text: "2nd Page"
                         halign: "center"
+        MDBottomNavigationItem:
+            name: 'Setting Screen'
+            text: "Setting"
+            icon: 'wrench'
+            Screen:
+                BoxLayout:
+                    orientation:'vertical'
+                BoxLayout:
+                    MDLabel:
+                        text: "3rd Page"
+                        halign: "center"
     MDToolbar:
         title: "Robot Arm Simulation"
         font_size: '50dp'
         spacing: "20dp"
         elevation_normal: 12
         pos_hint: {"top": 1}
-        left_action_items:[['Images/user.png', lambda x: nav_drawer.set_state("open"),"Drawer"]]
+        left_action_items:[['Images/user.png']]
         right_action_items:[["account", lambda x: root.loginscreen.open(), "Account"],["bell", lambda x: x, "Notification"],["lan-connect", lambda x: x, "Connection Status"],['exit-to-app', lambda x: root.exit(),"Exit Program"]]
         icon_color: 0, 1, 0, 1
     
-    MDNavigationDrawer:
-        id: nav_drawer
-        ScrollView:
-            id: md_list
-            ContentNavigationDrawer:
-                MDRoundFlatIconButton:
-                    id: Main_btn
-                    icon: "folder-information"
-                    text: "Main"
-                    width: dp(250)
-                    height: dp(350)
-
-                MDRoundFlatIconButton:
-                    id: Graph_btn
-                    icon: "database"
-                    text: "Graph"
-                    width: dp(250)
-                    height: dp(350)
-
-                MDRoundFlatIconButton:
-                    id: Test_script_btn
-                    icon: "script"
-                    text: "Test Script"
-                    width: dp(250)
-                    height: dp(350)
-
-                MDRoundFlatIconButton:
-                    id: Recipe_btn
-                    icon: "upload"
-                    text: "Recipe"
-                    width: dp(250)
-                    height: dp(350)
-                MDRoundFlatIconButton:
-                    id: Help_btn
-                    icon: "help"
-                    text: "Help"
-                    width: dp(250)
-                    height: dp(350)
