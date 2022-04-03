@@ -6,10 +6,10 @@ from kivymd.uix.list import MDList
 from Screens.loginscreen import *
 from Containers.MainContainer import MainContainer
 
-Builder.load_file('baseframe.kv')
+Builder.load_file('OS.kv')
 Builder.load_file('Resources/widget_library.kv')
 
-class ContentSwitcher(Screen):
+class NavigationSwitcher(Screen):
     loginscreen= LoginScreen()
 
 
@@ -21,7 +21,7 @@ class MainApp(MDApp):
         #self.theme_cls.primary_palette = "Green"
         self.theme_cls.primary_cyan = "400"
         mainscreen = ScreenManager()
-        mainscreen.add_widget(ContentSwitcher())
+        mainscreen.add_widget(NavigationSwitcher())
         return mainscreen
     
 if __name__ == "__main__":
